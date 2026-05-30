@@ -1,0 +1,35 @@
+// Função para abrir o convite com animação
+function abrirConvite() {
+    const envelope = document.getElementById('tela-envelope');
+    const conteudo = document.getElementById('conteudo-convite');
+
+    // Inicia animação de sumir no envelope
+    envelope.classList.add('envelope-sumir');
+
+    // Remove a classe oculto do convite e aplica efeito de surgir
+    conteudo.classList.remove('oculto');
+    conteudo.classList.add('fade-in');
+
+    // Remove completamente o envelope da tela após terminar a animação física
+    setTimeout(() => {
+        envelope.style.display = 'none';
+    }, 800);
+}
+
+// Funções dos Modais (Pop-ups)
+function abrirModal(idModal) {
+    const modal = document.getElementById(idModal);
+    modal.style.display = "flex";
+}
+
+function fecharModal(idModal) {
+    const modal = document.getElementById(idModal);
+    modal.style.display = "none";
+}
+
+// Fecha o modal se o convidado clicar fora da caixinha
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+        event.target.style.display = "none";
+    }
+}
