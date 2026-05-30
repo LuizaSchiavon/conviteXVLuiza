@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luiza Schiavon XV</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Ícones modernos -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body>
+
+    <!-- TELA INICIAL: ENVELOPE FECHADO -->
+    <div class="envelope-wrapper" id="tela-envelope" onclick="abrirConvite()">
+        <div class="envelope-card">
+            <img src="logo.png" alt="Logo LS" class="logo-envelope">
+            <p class="texto-clique">Toque para abrir o convite</p>
+            <div class="icone-clique"><i class="fa-solid fa-heart-pulse"></i></div>
+        </div>
+    </div>
+
+    <!-- CONTEÚDO PRINCIPAL (Fica escondido no início) -->
+    <div class="container oculto" id="conteudo-convite">
+        <!-- Monograma LS Integrado -->
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo LS Luiza Schiavon" class="logo-festa">
+        </div>
+
+        <!-- Cabeçalho -->
+        <header class="header">
+            <p class="subtitulo">SAVE THE DATE</p>
+            <h1>Luiza Schiavon XV</h1>
+            <div class="linha-divisoria">✨</div>
+        </header>
+
+        <!-- Informações Principais -->
+        <section class="info-principal">
+            <p class="data"><i class="fa-regular fa-calendar-days"></i> 27 de Junho</p>
+            <p class="hora"><i class="fa-regular fa-clock"></i> Às 21:00h</p>
+            <p class="local"><i class="fa-solid fa-location-dot"></i> Villagio Pampulha</p>
+            <p class="endereco">Av. Otacílio Negrão de Lima</p>
+        </section>
+
+        <!-- Botões Interativos -->
+        <div class="botoes-grid">
+            <button class="btn" onclick="abrirModal('modal-rsvp')">
+                <i class="fa-solid fa-check-to-slot"></i> Confirmar Presença
+            </button>
+
+            <button class="btn" onclick="abrirModal('modal-dress')">
+                <i class="fa-solid fa-shirt"></i> Dress Code
+            </button>
+
+            <button class="btn" onclick="abrirModal('modal-presente')">
+                <i class="fa-solid fa-gift"></i> Lista de Presentes
+            </button>
+
+            <a href="https://google.com" target="_blank" class="btn link-btn">
+                <i class="fa-solid fa-map-location-dot"></i> Ver Rota no Mapa
+            </a>
+        </div>
+    </div>
+
+    <!-- MODAIS (Pop-ups) -->
+    <div id="modal-rsvp" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar" onclick="fecharModal('modal-rsvp')">&times;</span>
+            <h2>Confirmar Presença</h2>
+            <p>Sua presença é muito importante para mim! Por favor, confirme até o dia 10/06.</p>
+            <a href="https://google.com" target="_blank" class="btn-acao">Abrir Formulário de RSVP</a>
+        </div>
+    </div>
+
+    <div id="modal-dress" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar" onclick="fecharModal('modal-dress')">&times;</span>
+            <h2>Dress Code</h2>
+            <p><strong>Traje: Esporte Fino / Passeio Completo</strong></p>
+            <p>Venha com a sua melhor roupa de festa para comemorar comigo!</p>
+            <p class="alerta-cor">⚠️ Pedimos a gentileza de evitar roupas na cor <strong>Rosa Debutante</strong>.</p>
+        </div>
+    </div>
+
+    <div id="modal-presente" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar" onclick="fecharModal('modal-presente')">&times;</span>
+            <h2>Sugestão de Presentes</h2>
+            <p>Caso queira me presentear, preparei uma lista virtual ou chave Pix para facilitar:</p>
+            <div class="pix-box">
+                <p><strong>Chave PIX:</strong> seu-email@ou-celular.com</p>
+                <p><strong>Nome:</strong> Luiza Schiavon</p>
+            </div>
+            <a href="https://quereceber.com.br" target="_blank" class="btn-acao">Ver Lista de Presentes</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
