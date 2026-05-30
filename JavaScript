@@ -1,0 +1,18 @@
+// Função para abrir qualquer modal pelo ID
+function abrirModal(idModal) {
+    const modal = document.getElementById(idModal);
+    modal.style.display = "flex";
+}
+
+// Função para fechar qualquer modal pelo ID
+function fecharModal(idModal) {
+    const modal = document.getElementById(idModal);
+    modal.style.display = "none";
+}
+
+// Fecha o modal automaticamente se o convidado clicar fora da caixinha branca
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+        event.target.style.display = "none";
+    }
+}
